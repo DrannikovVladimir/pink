@@ -1,0 +1,43 @@
+.modal-error {
+  display: none;
+  width: 320px;
+  margin: 0 auto;
+  padding: 40px 20px 50px;
+
+  text-align: center;
+}
+
+.modal-error__title {
+  margin-bottom: 30px;
+
+  .other-text(18px, 24px);
+  .text-bold();
+}
+
+.modal-error__text {
+  margin-bottom: 40px;
+}
+
+@media (min-width: 660px) {
+  .modal-error {
+    width: 460px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .modal-error__button {
+    margin: 0 auto;
+  }
+
+  .modal-error__text {
+    .other-text(18px, 24px);
+  }
+}
+
+@media (min-width: 960px) {
+  .modal-error {
+    width: 780px;
+    padding-left: 210px;
+    padding-right: 210px;
+  }
+}

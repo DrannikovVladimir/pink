@@ -1,0 +1,32 @@
+.copyright {
+  display: flex;
+  align-items: center;
+}
+
+.copyright__text {
+  margin-right: 16px;
+}
+
+.copyright__link {
+  display: block;
+  width: 27px;
+  height: 34px;
+}
+
+@media (min-width: 660px) {
+  .copyright__link:hover {
+    path {
+      fill: black;
+    }
+  }
+
+  .copyright__link:active {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: 960px) {
+  .copyright__text {
+    .other-text(18px, 18px);
+  }
+}

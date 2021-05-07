@@ -1,0 +1,146 @@
+.effect--mobile-none {
+  display: none;
+}
+
+@media (min-width: 660px) {
+  .effect--mobile-none {
+    display: block;
+  }
+
+  .effect__wrapper {
+    position: relative;
+
+    display: flex;
+    justify-content: flex-end;
+
+    margin: 0 auto;
+    padding: 95px 20px 85px;
+    width: 660px;
+
+    background-image: url("../img/icon-timer.svg");
+    background-repeat: no-repeat;
+    background-size: 238px 276px;
+    background-position: 22px center;
+
+    &::before {
+      content: "24";
+
+      position: absolute;
+      top: 134px;
+      left: 86px;
+
+      .other-text(96px, 150px);
+      .text-bold();
+      color: @accent-color;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 114px;
+      left: 40px;
+
+      display: block;
+      width: 202px;
+      height: 202px;
+
+      border: 14px solid @accent-color;
+      border-radius: 101px;
+    }
+  }
+
+  .effect__inner-wrapper {
+    width: 310px;
+
+    text-align: left;
+  }
+
+  .effect__title {
+    width: 200px;
+    margin: 0;
+    margin-bottom: 10px;
+    .other-text(30px, 36px);
+  }
+
+  .effect__text {
+    width: 298px;
+    margin: 0;
+    margin-bottom: 11px;
+  }
+
+  .effect__link {
+    text-decoration: underline;
+    color: @accent-color;
+  }
+}
+
+@media (min-width: 960px) {
+  .effect {
+    padding-bottom: 40px;
+    background-color: @bg-extra-color;
+  }
+
+  .effect__wrapper {
+    padding: 112px 11px 73px;
+    width: 960px;
+
+    background-size: 298px 345px;
+    background-position: 10px 21px;
+
+    &::before {
+      content: "24";
+
+      position: absolute;
+      top: 116px;
+      left: 88px;
+
+      .other-text(120px, 189px);
+      .text-bold();
+      color: @accent-color;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 91px;
+      left: 32px;
+
+      display: block;
+      width: 253px;
+      height: 253px;
+
+      border: 17px solid @accent-color;
+      border-radius: 150px;
+    }
+
+    br {
+      display: none;
+    }
+  }
+
+
+  .effect__inner-wrapper {
+    width: 574px;
+  }
+
+  .effect__title {
+    width: auto;
+    margin-bottom: 25px;
+  }
+
+  .effect__text {
+    width: 525px;
+    margin-bottom: 31px;
+    .other-text();
+
+    span {
+      display: inline;
+    }
+  }
+
+  .effect__link {
+    .other-text();
+  }
+}

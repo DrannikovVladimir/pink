@@ -1,0 +1,32 @@
+.button-form {
+  width: 280px;
+  padding-top: 14px;
+  padding-bottom: 15px;
+
+  .other-text();
+  color: @bg-main-color;
+  text-transform: uppercase;
+  .text-bold();
+
+  background-color: @button-form-color;
+  border: 2px solid @button-form-color;
+
+  &:hover {
+    background-color: darken(@button-form-color, 5%);
+    border: 2px solid darken(@button-form-color, 5%);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    background-color: @border-color;
+  }
+}
+
+@media (min-width: 660px) {
+  .button-form {
+    width: 300px;
+  }
+}

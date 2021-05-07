@@ -1,0 +1,49 @@
+.modal-accept {
+  display: none;
+  width: 320px;
+  margin: 0 auto;
+  padding: 40px 20px 50px;
+
+  text-align: center;
+
+  background-image: linear-gradient(@bg-main-color 0, @bg-main-color 240px, @bg-extra-color 240px, @bg-main-color 100%);
+}
+
+.modal-accept__title {
+  margin-bottom: 30px;
+
+  .other-text(18px, 24px);
+  .text-bold();
+}
+
+.modal-accept__text {
+  margin-bottom: 80px;
+}
+
+@media (min-width: 660px) {
+  .modal-accept {
+    width: 460px;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .modal-accept__button {
+    margin: 0 auto;
+  }
+
+  .modal-accept__text {
+    .other-text(18px, 24px);
+  }
+}
+
+@media (min-width: 960px) {
+  .modal-accept {
+    width: 780px;
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+
+  .modal-accept__button {
+    width: 460px;
+  }
+}

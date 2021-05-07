@@ -1,0 +1,206 @@
+.feedback {
+  padding: 42px 0 8px;
+
+  text-align: center;
+}
+
+.feedback__wrapper {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.feedback__item-title {
+  margin: 0;
+  margin-bottom: 14px;
+  .other-text();
+  .text-bold();
+}
+
+.feedback__item-subtitle {
+  display: none;
+}
+
+.feedback__item-text {
+  margin: 0;
+  margin-bottom: 35px;
+
+  .main-text(14px, 30px);
+}
+
+.feedback__toggles {
+  display: flex;
+  width: 62px;
+  height: 12px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.feedback__toggles-item {
+  position: relative;
+
+  display: block;
+  width: 12px;
+  height: 12px;
+
+  border: none;
+  background-color: transparent;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 12px;
+    height: 12px;
+
+    background-color: @basic-color;
+    border: 3px solid @bg-extra-color;
+    border-radius: 6px;
+
+    opacity: 0.3;
+  }
+
+  &--active::before {
+    background-color: @bg-main-color;
+    border-color: @basic-color;
+    opacity: 1;
+  }
+}
+
+@media (min-width: 660px) {
+  .feedback {
+    padding-top: 40px;
+    padding-bottom: 0;
+  }
+
+  .feedback__wrapper {
+    width: 660px;
+  }
+
+  .feedback__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feedback__item-subtitle {
+    display: block;
+    margin: 0;
+    margin-bottom: 36px;
+
+    order: 3;
+  }
+
+  .feedback__item-title {
+    margin-bottom: 8px;
+
+    order: 2;
+    .other-text(20px, 30px);
+  }
+
+  .feedback__item-text {
+    .other-text();
+  }
+}
+
+@media (min-width: 960px) {
+  .feedback {
+    position: relative;
+    padding-top: 117px;
+    padding-bottom: 30px;
+
+    &::before {
+      content: "";
+
+      position: relative;
+      top: -45px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      display: block;
+      width: 79px;
+      height: 69px;
+
+      background-image: url("../img/icon-quotes.svg");
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: 79px 63px;
+
+      opacity: 0.1;
+    }
+  }
+
+  .feedback__wrapper {
+    position: relative;
+    width: 960px;
+  }
+
+  .feedback__item-title {
+    margin-bottom: 5px;
+
+    .other-text(24px, 30px);
+  }
+
+  .feedback__item-text {
+    width: 690px;
+    margin: 0 auto 36px;
+
+    &::after,
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 29px;
+
+      display: block;
+      width: 22px;
+      height: 41px;
+
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 22px 41px;
+      opacity: 0.3;
+
+      cursor: pointer;
+    }
+
+    &::before {
+      left: 10px;
+
+      background-image: url("../img/icon-review-arrow-left.svg");
+    }
+
+    &::after {
+      right: 10px;
+
+      background-image: url("../img/icon-review-arrow-right.svg");
+    }
+
+    &:hover::after,
+    &:hover::before {
+      opacity: 1;
+    }
+
+    &:active::after,
+    &:active::before {
+      opacity: 0.1;
+    }
+  }
+
+  .feedback__item-subtitle {
+    margin-bottom: 0;
+    .other-text();
+  }
+
+  .feedback__toggles {
+    display: none;
+  }
+}
+
+.feedback__item--display-none {
+  display: none;
+}
